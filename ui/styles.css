@@ -1,0 +1,234 @@
+/* ============================================================
+   AI Indian Equity Predictor — Premium Dark Theme
+   ============================================================
+   Design: Dark glassmorphism with teal/cyan accents.
+   Font: Inter (loaded via Google Fonts in app.py).
+   ============================================================ */
+
+/* --- Global --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* --- Hide Streamlit defaults --- */
+#MainMenu { visibility: hidden; }
+footer { visibility: hidden; }
+header { visibility: hidden; }
+
+/* --- Glassmorphic card --- */
+.glass-card {
+    background: rgba(26, 31, 46, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 212, 170, 0.15);
+}
+
+/* --- Company header --- */
+.company-header {
+    background: linear-gradient(135deg, rgba(0, 212, 170, 0.12), rgba(0, 150, 255, 0.08));
+    border: 1px solid rgba(0, 212, 170, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+.company-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+}
+.company-meta {
+    font-size: 0.9rem;
+    color: #A0AEC0;
+}
+
+/* --- Exchange badge --- */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.badge-nse {
+    background: rgba(0, 212, 170, 0.2);
+    color: #00D4AA;
+    border: 1px solid rgba(0, 212, 170, 0.3);
+}
+.badge-bse {
+    background: rgba(255, 170, 0, 0.2);
+    color: #FFAA00;
+    border: 1px solid rgba(255, 170, 0, 0.3);
+}
+
+/* --- Signal badges --- */
+.signal-buy {
+    background: linear-gradient(135deg, #00C853, #00E676);
+    color: #000;
+    padding: 0.4rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+}
+.signal-sell {
+    background: linear-gradient(135deg, #FF1744, #FF5252);
+    color: #FFF;
+    padding: 0.4rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 15px rgba(255, 23, 68, 0.3);
+}
+.signal-hold {
+    background: linear-gradient(135deg, #FF9100, #FFB74D);
+    color: #000;
+    padding: 0.4rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 0 4px 15px rgba(255, 145, 0, 0.3);
+}
+
+/* --- Metric card --- */
+.metric-card {
+    background: rgba(26, 31, 46, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+}
+.metric-label {
+    font-size: 0.75rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+}
+.metric-value {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #E2E8F0;
+}
+.metric-delta-up {
+    color: #00E676;
+    font-size: 0.85rem;
+}
+.metric-delta-down {
+    color: #FF5252;
+    font-size: 0.85rem;
+}
+
+/* --- Prediction card --- */
+.prediction-card {
+    background: rgba(26, 31, 46, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.prediction-card:hover {
+    transform: translateY(-3px);
+}
+.prediction-timeframe {
+    font-size: 0.85rem;
+    color: #A0AEC0;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.prediction-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0.5rem 0;
+}
+.prediction-return-up {
+    color: #00E676;
+    font-weight: 600;
+}
+.prediction-return-down {
+    color: #FF5252;
+    font-weight: 600;
+}
+
+/* --- Confidence bar --- */
+.confidence-bar-bg {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+    margin: 0.5rem 0;
+    overflow: hidden;
+}
+.confidence-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.8s ease;
+}
+.conf-high { background: linear-gradient(90deg, #00C853, #00E676); }
+.conf-med  { background: linear-gradient(90deg, #FF9100, #FFB74D); }
+.conf-low  { background: linear-gradient(90deg, #FF1744, #FF5252); }
+
+/* --- Disclaimer --- */
+.disclaimer {
+    background: rgba(255, 23, 68, 0.08);
+    border: 1px solid rgba(255, 23, 68, 0.2);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+    color: #FF8A80;
+    margin-top: 2rem;
+}
+
+/* --- Sentiment tag --- */
+.sentiment-positive {
+    color: #00E676;
+    font-weight: 600;
+}
+.sentiment-negative {
+    color: #FF5252;
+    font-weight: 600;
+}
+.sentiment-neutral {
+    color: #FFB74D;
+    font-weight: 600;
+}
+
+/* --- Tabs styling --- */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+/* --- Progress bar --- */
+.stProgress > div > div {
+    background: linear-gradient(90deg, #00D4AA, #0096FF) !important;
+}

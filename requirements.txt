@@ -1,0 +1,45 @@
+# --- Core Web Application ---
+streamlit>=1.30.0
+
+# --- Data Acquisition ---
+yfinance>=0.2.30
+
+# --- Data Processing & Numerics ---
+pandas>=2.0.0
+numpy>=1.24.0
+
+# --- Interactive Charts & Visualization ---
+plotly>=5.18.0
+kaleido>=0.2.1          # Static image export for Plotly figures in PDF reports
+
+# --- Time-Series Forecasting ---
+prophet>=1.1.0          # Fallback trend model when N-HiTS weights are absent
+
+# --- Gradient Boosting ---
+xgboost>=3.2.0          # Fast histogram-based CPU gradient booster
+lightgbm>=4.1.0         # DART boosting (dropout trees) for financial data
+
+# --- Machine Learning Utilities ---
+scikit-learn>=1.3.0
+joblib>=1.3.0
+
+# --- Technical Analysis Indicators ---
+ta>=0.11.0
+
+# --- Deep Learning & Transformers (TFT, BiLSTM, FinancialBERT, Chronos, Qwen) ---
+torch>=2.1.0
+torchvision
+transformers>=4.35.0    # HuggingFace Transformers pipeline & tokenizer
+chronos-forecasting>=1.2.0  # Amazon Chronos foundation model
+
+# --- Web Scraping & News RSS ---
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+feedparser>=6.0.0       # Google News RSS feed parser
+
+# --- PDF Report Generation ---
+fpdf2>=2.7.0
+
+# --- Optional Performance Enhancements for Qwen Sentiment ---
+# accelerate>=0.27.0    # Uncomment for optimized CPU inference
+# bitsandbytes>=0.41.0  # Uncomment for 4-bit model quantization

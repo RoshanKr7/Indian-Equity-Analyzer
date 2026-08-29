@@ -1,0 +1,76 @@
+# ==============================================
+# Python & Virtual Environments
+# ==============================================
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# ==============================================
+# Environment Variables & Secrets
+# ==============================================
+.env
+.env.*
+*.env
+.streamlit/secrets.toml
+
+# ==============================================
+# ML / DL Weights & Artifacts (>100MB GitHub limit)
+# ==============================================
+*.safetensors
+*.pth
+*.pt
+*.bin
+*.pkl
+*.joblib
+*.h5
+*.onnx
+catboost_info/
+wandb/
+lightning_logs/
+runs/
+models/pretrained/finbert_indian/model.safetensors
+models/pretrained/*.pth
+models/pretrained/*.pkl
+
+# ==============================================
+# Testing & Linters
+# ==============================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# ==============================================
+# Jupyter Notebooks
+# ==============================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ==============================================
+# IDEs & System Files
+# ==============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================================
+# Outputs & Generated Reports
+# ==============================================
+*.pdf
+*.log
+reports/

@@ -1,0 +1,12 @@
+{
+  "base_model": "ahmedrachid/FinancialBERT-Sentiment-Analysis",
+  "fine_tuned_on": "Indian NSE/BSE financial news + Financial News Sentiment",
+  "num_samples": 8621,
+  "num_epochs": 4,
+  "val_f1": 0.8137,
+  "id2label": {
+    "0": "negative",
+    "1": "neutral",
+    "2": "positive"
+  }
+}
